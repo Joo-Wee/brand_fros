@@ -10,9 +10,15 @@ module.exports = {
         'turqoise': '#40E0D0',
         'body-color': '#504d71',
         'black-900_02': '#020100',
+		'black_900': '#1b1000',
+        'black_900_00': '#00000000',
+        'black_900_01': '#050300',
         'red_a700_99': '#ff0a0a99',
         'red_a700_01': '#FF0404',
-        'blue-gray_100_19': '#d9d9d919'
+		'red_900': '#a30000',
+        'red_a700': '#ff3030',
+        'blue-gray_100_19': '#d9d9d919',
+		'blue-gray_100': '#d9d9d9'
     },
 
       backgroundImage: {
