@@ -9,9 +9,10 @@ module.exports = {
         'deep-purple': '#2E1A47',
         'turqoise': '#40E0D0',
         'body-color': '#504d71',
-		'black-900_02': '#020100',
-		'red_a700_99': '#ff0a0a99',
-		'red_a700_01': '#ff3030'
+        'black-900_02': '#020100',
+        'red_a700_99': '#ff0a0a99',
+        'red_a700_01': '#FF0404',
+        'blue-gray_100_19': '#d9d9d919'
     },
 
       backgroundImage: {
