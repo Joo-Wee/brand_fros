@@ -692,40 +692,6 @@ html {
   font-family: 'Orbitron', sans-serif;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .ui.button.circle{
   border-radius: 50%;
 }
@@ -1187,6 +1153,10 @@ html {
   left: -10%;
 }
 
+.left-\[-7\%\]{
+  left: -7%;
+}
+
 .left-\[15vw\]{
   left: 15vw;
 }
@@ -1233,6 +1203,10 @@ html {
 
 .top-\[56\%\]{
   top: 56%;
+}
+
+.top-\[69\%\]{
+  top: 69%;
 }
 
 .top-\[8\.50rem\]{
@@ -1282,6 +1256,11 @@ html {
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .my-auto{
@@ -1363,6 +1342,10 @@ html {
 
 .mr-\[7\.38rem\]{
   margin-right: 7.38rem;
+}
+
+.ms-\[5vw\]{
+  margin-inline-start: 5vw;
 }
 
 .mt-12{
@@ -1513,6 +1496,14 @@ html {
   height: 8.75rem;
 }
 
+.h-\[10\.63rem\]{
+  height: 10.63rem;
+}
+
+.h-\[6\.63rem\]{
+  height: 6.63rem;
+}
+
 .min-h-\[100vh\]{
   min-height: 100vh;
 }
@@ -1587,6 +1578,14 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-3\/4{
+  width: 75%;
+}
+
+.w-4\/5{
+  width: 80%;
 }
 
 .min-w-\[10\.00rem\]{
@@ -1901,6 +1900,10 @@ html {
   padding: 1.63rem;
 }
 
+.p-\[1\.25rem\]{
+  padding: 1.25rem;
+}
+
 .px-\[1\.25rem\]{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1994,6 +1997,26 @@ html {
 .py-\[4\.00rem\]{
   padding-top: 4.00rem;
   padding-bottom: 4.00rem;
+}
+
+.px-\[0\.25rem\]{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.px-\[0\.15rem\]{
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
 }
 
 .pb-12{

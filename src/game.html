@@ -10,28 +10,31 @@
     <link rel="shortcut icon" type="image/png" href="media/froska.png">
 </head>
 
-<body class="sm:p-[1.00rem] md:py-[1.25rem] ps-[12vw] pe-[12vw] w-full bg-black-900_02">
+<body class="md:py-[1.25rem] ps-[12vw] pe-[12vw] w-full bg-black-900_02">
     <header>
-        <div class="max-w-[83.75rem] md:px-[1.25rem] lg:px-[1.25rem] mx-auto w-full">
-            <div class="gap-[1.25rem] flex justify-between">
-                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/675aaa05ee92d0001c79518e/675aaab95522ee001cd75b83/675f125a5522ee001cf9f831/appSource/images/img_group_19.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241218%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241218T161458Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=280c6fdd2e597a7a1b824bf0bc25d5d2ad2a8d06d42ae5bafd3743b11225a24f&amp;X-Amz-SignedHeaders=host" alt="Froska Image" class="w-[14%] h-[4.63rem] self-center object-contain">
-                <div class="rounded-[5px] p-[0.25rem] gap-[0.63rem] mt-[0.50rem] flex items-center bg-[#1B1000]">
+		<nav id="header" class="nav-logo flex ml-0 mt-5">
+            <div class="nav-name image flex-initial -mt-[3.2rem]">
+                <img src="media/logo_froska.svg" alt="Froska_Logo">
+            </div>
+
+            <div class="flex w-full ml-7 box-border rounded-[5px] h-[3.00rem]">
+				<div class="ml-[46vw] rounded-[5px] py-6 px-[0.25rem] gap-[0.63rem] mt-[0.50rem] flex items-center bg-[#1B1000]">
                     <p class="text-[0.88rem] !font-aeoniktrial font-normal !text-white">
                     3000 Froska</p>
                     <button class="round fill size-xs bg-[#251A00] btn min-w-[6.88rem] flex flex-row items-center justify-center text-center font-aeoniktrial text-white">
                     0xxf0...54323</button>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <main class="py-2 ps-[12vw] pe-[12vw]">
+    <main class="py-2">
         <div class="text-[50px] font-bold text-white my-5 pe-[16vw] top-header">
             <h1 class="glitchText max-[900px]:text-4xl">Wheel Spin</h1>
         </div>
         <div class="flex flex-row items-center z-[2] md:relative">
-            <div class = "absolute top-[56%] left-[-10%]">
-                <img src="https://dhws-production.s3.ap-south-1.amazonaws.com/675aaa05ee92d0001c79518e/675aaab95522ee001cd75b83/675f125a5522ee001cf9f831/appSource/images/img_11.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQODH4IWPQLIXIJ64%2F20241218%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241218T161458Z&amp;X-Amz-Expires=25200&amp;X-Amz-Signature=6455defcdb26a877f5a97c1804e56c9fa7a47c1a0ac7563ccccd45a35fe55cfe&amp;X-Amz-SignedHeaders=host" alt="Eleven Image" class="mb-[1.38rem] w-[14%] h-[12.63rem] self-end object-contain md:w-full">
+            <div class = "absolute top-[69%] left-[-7%]">
+                <img src="media/11.png" alt="Eleven Image" class="mb-[1.38rem] w-[14%] h-[12.63rem] self-end object-contain md:w-full">
             </div>
             <div class="rounded-[14px] max-w-[83.75rem] sm:py-[1.00rem] sm:px-[1.25rem] md:p-[1.25rem] lg:py-[2.00rem] lg:px-[1.25rem] lg:mr-0 md:mr-0 py-[4.00rem] px-[3.50rem] gap-[2.00rem] mr-[1.00rem] flex w-full justify-center">
                     <div class="rounded-[10px] px-[1.25rem] gap-[2.13rem] w-[50%] flex flex-col bg-[#A30000] md:w-full">
@@ -44,21 +47,21 @@
                                     <span>Spin Now</span>
                                 </button>
                             </div>
-                            <div class="container">
+                            <div class="my-8 ms-[5vw] container_1">
 								<div class="spinBtn">SPIN</div>
 								<div class="wheel">
-									<div class="number" style = "--i:1; --clr: linear-gradient(180deg 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>10 METIS</span></div>
-									<div class="number" style = "--i:2; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0.002 METIS</span></div>
-									<div class="number" style = "--i:3; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>5K FROSKA</span></div>
-									<div class="number" style = "--i:4; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0</span></div>
-									<div class="number" style = "--i:5; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 FROSKA</span></div>
-									<div class="number" style = "--i:6; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>500 KA</span></div>
-									<div class="number" style = "--i:7; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>B</span></div>
-									<div class="number" style = "--i:8; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0.5 METIS</span></div>
-									<div class="number" style = "--i:9; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>REKT</span></div>
-									<div class="number" style = "--i:10; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>20K FROSKA</span></div>
-									<div class="number" style = "--i:11; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 METIS</span></div>
-									<div class="number" style = "--i:12; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>GO HOME</span></div>
+									<div class="number num_odd" style = "--i:1; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>10 METIS</span></div>
+									<div class="number num_even" style = "--i:2; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0.002 METIS</span></div>
+									<div class="number num_odd" style = "--i:3; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>5K FROSKA</span></div>
+									<div class="number num_even" style = "--i:4; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0</span></div>
+									<div class="number num_odd" style = "--i:5; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 FROSKA</span></div>
+									<div class="number num_even" style = "--i:6; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>500 KA</span></div>
+									<div class="number num_odd" style = "--i:7; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>B</span></div>
+									<div class="number num_even" style = "--i:8; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0.5 METIS</span></div>
+									<div class="number num_odd" style = "--i:9; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>REKT</span></div>
+									<div class="number num_even" style = "--i:10; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>20K FROSKA</span></div>
+									<div class="number num_odd" style = "--i:11; --clr: radial-gradient(150% 100% at 150% 15%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 METIS</span></div>
+									<div class="number num_even" style = "--i:12; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>GO HOME</span></div>
 								</div>
 							</div>
                 
