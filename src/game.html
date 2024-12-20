@@ -4,40 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Froska Page</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="output.css">
     <link rel="shortcut icon" type="image/png" href="media/froska.png">
 </head>
-
-<body>
-    <div class="container">
-        <div class="spinBtn">SPIN</div>
-        <div class="wheel">
-            <div class="number" style = "--i:1; --clr: linear-gradient(180deg 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>10 METIS</span></div>
-            <div class="number" style = "--i:2; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0.002 METIS</span></div>
-            <div class="number" style = "--i:3; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>5K FROSKA</span></div>
-            <div class="number" style = "--i:4; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0</span></div>
-            <div class="number" style = "--i:5; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 FROSKA</span></div>
-            <div class="number" style = "--i:6; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>500 KA</span></div>
-            <div class="number" style = "--i:7; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>B</span></div>
-            <div class="number" style = "--i:8; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0.5 METIS</span></div>
-            <div class="number" style = "--i:9; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>REKT</span></div>
-            <div class="number" style = "--i:10; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>20K FROSKA</span></div>
-            <div class="number" style = "--i:11; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 METIS</span></div>
-            <div class="number" style = "--i:12; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>GO HOME</span></div>
-        </div>
-    </div>
-    <script>
-        let wheel = document.querySelector('.wheel');
-        let spinBtn = document.querySelector('.spinBtn');
-        let value = Math.ceil(Math.random() *3600);
-
-        spinBtn.onclick = function(){
-            wheel.style.transform = "rotate(" +value + "deg)";
-            value += Math.ceil(Math.random() * 3600);
-        }
-    </script>
-</body>
 
 <body class="sm:p-[1.00rem] md:py-[1.25rem] ps-[12vw] pe-[12vw] w-full bg-black-900_02">
     <header>
@@ -73,13 +44,24 @@
                                     <span>Spin Now</span>
                                 </button>
                             </div>
-                            <div class="gap-[0.63rem] mt-[0.88rem] flex flex-col items-start self-end sm:self-stretch">
-                                <h4 class="lg:text-[1.25rem] size-headinglg heading ui text-[1.50rem] !font-orbitron5 font-bold !text-white-a700">
-                                Wheel of fortune</h4>
-                                <p class="lg:text-[0.81rem] size-texts text ui text-[1.00rem] font-normal !text-white-a700">
-                                Try your luck</p>
-                            </div>
-                            
+                            <div class="container">
+								<div class="spinBtn">SPIN</div>
+								<div class="wheel">
+									<div class="number" style = "--i:1; --clr: linear-gradient(180deg 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>10 METIS</span></div>
+									<div class="number" style = "--i:2; --clr: linear-gradient(180deg, #FFFB90 -0.45%, #FBEA78 14.55%, #F8DC65 25.26%, #E6C758 28.48%, #C5A041 35.97%, #AD8330 42.4%, #9E7226 47.76%, #996C22 52.05%, #9D7126 55.26%, #AA8131 59.54%, #BE9B42 63.83%, #DABE5B 68.12%, #FBE878 73.47%, #FFFFAA 82.04%, #FBE878 88.47%, #A4631B 106.68%);"><span>0.002 METIS</span></div>
+									<div class="number" style = "--i:3; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>5K FROSKA</span></div>
+									<div class="number" style = "--i:4; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0</span></div>
+									<div class="number" style = "--i:5; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 FROSKA</span></div>
+									<div class="number" style = "--i:6; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>500 KA</span></div>
+									<div class="number" style = "--i:7; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>B</span></div>
+									<div class="number" style = "--i:8; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>0.5 METIS</span></div>
+									<div class="number" style = "--i:9; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>REKT</span></div>
+									<div class="number" style = "--i:10; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>20K FROSKA</span></div>
+									<div class="number" style = "--i:11; --clr: radial-gradient(216.02% 99.44% at 49.39% 99.98%, #FFADAC 37%, #FD9FA3 44%, #F67B8D 56%, #EB4069 72%, #E00041 88%, #E10643 90%, #E51748 92%, #EB3351 95%, #F45A5E 97%, #FF8B6E 100%);"><span>1 METIS</span></div>
+									<div class="number" style = "--i:12; --clr: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);"><span>GO HOME</span></div>
+								</div>
+							</div>
+                
                         </div>
                     </div>
                     <div class="gap-[1.50rem] w-[32%] flex flex-col md:w-full">
@@ -105,5 +87,15 @@
             </div>
         </div>   
     </main>
+	<script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random() *3600);
+
+        spinBtn.onclick = function(){
+            wheel.style.transform = "rotate(" +value + "deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+    </script>
 </body>
 </html>
