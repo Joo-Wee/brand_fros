@@ -16,12 +16,14 @@ function headerShadow() {
 	const navHeader = document.getElementById("header");
 	if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
 		navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-		navHeader.style.height = "70px";
+		navHeader.style.height = "100px";
 		navHeader.style.lineHeight = "70px";
-        navHeader.style.backgroundColor = "#a855f7";
+        navHeader.style.backgroundColor = "#020100";
         navHeader.style.borderRadius = "25rem";
         navHeader.style.borderWidth = "1.5px";
-        navHeader.style.borderColor = "black";
+        navHeader.style.borderColor = "#ccc";
+		navHeader.style.marginTop = "2px";
+		navHeader.style.width = "92%";
 	}
 	
 	else {
