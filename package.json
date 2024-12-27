@@ -5,7 +5,7 @@
   "description": "Meme Token on Metis Network",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./style.css -o ./src/output.css --watch",
+    "build": "npx tailwindcss -i ./style.css -o ./src/output.css --minify --watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
