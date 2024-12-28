@@ -91,6 +91,12 @@
 	  color: #690101;
   }
   
+  .active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+  }
+
   .gamestack_border {
     backdrop-filter: blur(1px);
     &::before {

@@ -10,7 +10,7 @@ function myMenuFunction(){
 	}
 }
 
-window.onscroll = function() {headerShadow()};
+/*window.onscroll = function() {headerShadow()};
 
 function headerShadow() {
 	const navHeader = document.getElementById("header");
@@ -35,7 +35,7 @@ function headerShadow() {
         navHeader.style.borderWidth = "0";
         navHeader.style.borderColor = "transparent";
 	}
-}
+}*/
 
 // ScrollReveal configuration
 const sr = ScrollReveal({
