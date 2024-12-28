@@ -28,7 +28,45 @@
         </nav>
     </header>
 
-    <main class="py-2">
+	<section id = "win-pop_up" class="pops fixed top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 scale-0 border border-solid border-black rounded-[10px] z-[10] bg-white w-[50vw] h-[50vh] max-w-4/5">
+		<div class="p-3 mb-2 ps-[48vw] pe-[48vw]">
+			<button onclick="restore()">&times;</button>
+		</div>
+		<div>
+			<div class="flex flex-col justify-center items-center">
+				<p class="text-[48px] text-[#11C229]">Payday!</p>
+				<p class="text-[48px] text-[#11C229]">you have won</p>
+			</div>
+			<div class="flex flex-col justify-center items-center mt-4 gap-10">
+				<div class="result py-6 px-3 text-xl text-white bg-[#11C229] rounded-lg"></div>
+				<button onclick="restore()" class="round fill size-sm bg-[#FF0404] btn min-w-[10.00rem] gap-[0.38rem] my-auto flex flex-row items-center justify-center text-center">
+					<img src="media/img_playcirclefilled.svg" alt="Play Circle Filled" class="w-[1.25rem] h-[1.25rem] object-contain">
+					<span class="text-white">Play Again</span>
+				</button>
+			</div>
+		</div>	
+	</section>
+
+	<section id = "try-again_pop" class="pops pop_down fixed top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 scale-0 border border-solid border-black rounded-[10px] z-[10] bg-white w-[50vw] h-[50vh] max-w-4/5">
+		<div class="p-3 mb-2 ps-[48vw] pe-[48vw]">
+			<button onclick="restore()">&times;</button>
+		</div>
+		<div>
+			<div class="flex flex-col justify-center items-center">
+				<p class="text-[48px] text-[#FF0404]">The Meme Gods</p>
+				<p class="text-[48px] text-[#FF0404]">Said No</p>
+			</div>
+			<div class="flex flex-col justify-center items-center mt-4 gap-10">
+				<div class="result py-6 text-xl text-white bg-[#11C229] rounded-lg"></div>
+				<button onclick="restore()" class="round fill size-sm bg-[#FF0404] btn min-w-[10.00rem] gap-[0.38rem] my-auto flex flex-row items-center justify-center text-center">
+					<img src="media/img_playcirclefilled.svg" alt="Play Circle Filled" class="w-[1.25rem] h-[1.25rem] object-contain">
+					<span class="text-white">Try Again</span>
+				</button>
+			</div>
+		</div>	
+	</section>
+
+    <main id = "blur" class="py-2">
 		<section class="py-2" id="games">
 			<div class="text-[50px] font-bold text-white my-5 pe-[16vw] top-header">
 				<h1 class="glitchText max-[900px]:text-4xl">Featured Games</h1>
@@ -79,25 +117,6 @@
 					</div>
 					<img src="media/Angelic Cat.png" alt="Footer Image" class="top-[-8.50rem] right-[-5.00rem] w-[18%] h-[16.75rem] absolute m-auto object-contain">
 			</div>
-		</section>
-		
-		<section class="fixed top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 border border-solid border-black rounded-[10px] z-[10] bg-white w-[50vw] h-[50vh] max-w-4/5">
-			<div class="p-3 mb-2 ps-[48vw] pe-[48vw]">
-				<button>&times;</button>
-			</div>
-			<div>
-				<div class="flex flex-col justify-center items-center">
-					<p class="text-[48px] text-[#11C229]">Payday!</p>
-					<p class="text-[48px] text-[#11C229]">you have won</p>
-				</div>
-				<div class="flex flex-col justify-center items-center mt-4 gap-10">
-					<div class="result w-1/3 h-16 bg-[#11C229] rounded-lg"></div>
-					<button class="round fill size-sm bg-[#FF0404] btn min-w-[10.00rem] gap-[0.38rem] my-auto flex flex-row items-center justify-center text-center">
-						<img src="media/img_playcirclefilled.svg" alt="Play Circle Filled" class="w-[1.25rem] h-[1.25rem] object-contain">
-						<span class="text-white">Play Again</span>
-					</button>
-				</div>
-			</div>	
 		</section>
 
         <section id= "main-game" class= "invisible">
@@ -167,22 +186,25 @@
         let wheel = document.querySelector('.wheel');
 		let spinBtn = document.querySelector('.spinBtn');
 		let resultDisplay = document.querySelector('.result'); // Element to display the result
+		let greenPop = document.querySelector('#win-pop_up');
+		let redPop = document.querySelector('#try-again_pop');
+		var blur = document.getElementById('blur');
 		let value = Math.ceil(Math.random() * 3600);
 
 		// Define 12 segments with their respective ranges
 		const segments = [
-			{ name: "10 METIS", number: 1, startAngle: 0, endAngle: 30 },
-			{ name: "GO HOME", number: 2, startAngle: 31, endAngle: 60 },
-			{ name: "1 METIS", number: 3, startAngle: 61, endAngle: 90 },
-			{ name: "20K FROSKA", number: 4, startAngle: 91, endAngle: 120 },
-			{ name: "REKT", number: 5, startAngle: 121, endAngle: 150 },
-			{ name: "0.5 METIS", number: 6, startAngle: 151, endAngle: 180 },
-			{ name: "B", number: 7, startAngle: 181, endAngle: 210 },
-			{ name: "500 KA", number: 8, startAngle: 211, endAngle: 240 },
-			{ name: "1 FROSKA", number: 9, startAngle: 241, endAngle: 270 },
-			{ name: "0", number: 10, startAngle: 271, endAngle: 300 },
-			{ name: "5K FROSKA", number: 11, startAngle: 301, endAngle: 330 },
-			{ name: "0.002 METIS", number: 12, startAngle: 331, endAngle: 360 },
+			{ name: "10 METIS", number: 1, startAngle: 0, endAngle: 30, flagStatus: "positive"},
+			{ name: "GO HOME", number: 2, startAngle: 31, endAngle: 60, flagStatus: "negative"},
+			{ name: "1 METIS", number: 3, startAngle: 61, endAngle: 90, flagStatus: "positive"},
+			{ name: "20K FROSKA", number: 4, startAngle: 91, endAngle: 120, flagStatus: "positive"},
+			{ name: "REKT", number: 5, startAngle: 121, endAngle: 150, flagStatus: "positive"},
+			{ name: "0.5 METIS", number: 6, startAngle: 151, endAngle: 180, flagStatus: "positive"},
+			{ name: "B", number: 7, startAngle: 181, endAngle: 210, flagStatus: "positive"},
+			{ name: "500 KA", number: 8, startAngle: 211, endAngle: 240, flagStatus: "positive"},
+			{ name: "1 FROSKA", number: 9, startAngle: 241, endAngle: 270, flagStatus: "positive"},
+			{ name: "0", number: 10, startAngle: 271, endAngle: 300, flagStatus: "negative"},
+			{ name: "5K FROSKA", number: 11, startAngle: 301, endAngle: 330, flagStatus: "positive"},
+			{ name: "0.002 METIS", number: 12, startAngle: 331, endAngle: 360, flagStatus: "positive"},
 		];
 
 		if (wheel && spinBtn && resultDisplay) {
@@ -208,17 +230,30 @@
 					);
 					console.log(result);
 					console.log(resultDisplay);
-					resultDisplay.textContent = `Result: ${result.name}, ${result.number}`; // Display result
+					
+					if(result.flagStatus == "positive"){
+						greenPop.style.transform = "scale(1)";
+						toggle();
+						resultDisplay.textContent = `${result.name}`;
+					}
+
+					else if(result.flagStatus == "negative"){
+						redPop.style.transform = "scale(1)";
+						toggle();
+						resultDisplay.textContent = `${result.name}`;
+					}
+
+					 // Display result
 
 					// Reset wheel
 					wheel.style.transition = "none";
 					wheel.style.transform = "rotate(0deg)";
 					value = Math.ceil(Math.random() * 3600); // Reset the spin value
 					setTimeout(() => {
-						wheel.style.transition = "transform 5s ease-out";
+						wheel.style.transition = "transform 3s ease-out";
 						isSpinning = false;
 					}, 50);
-				}, 5000); // Duration matches the CSS transition duration
+				}, 3000); // Duration matches the CSS transition duration
 			};
 		}		
 	else {
@@ -227,13 +262,23 @@
 		
 		function myFunction() {
 		  const x = document.getElementById('main-game');
-		  if (x.style.visibility === 'hidden') {
-			x.style.visibility = 'visible';
-			location.href = '#main-game';
-		  } else {
-			x.style.visibility = 'hidden';
-		  }
+		  x.style.visibility = 'visible';
+		  location.href ='#main-game';
 		  
+		}
+
+		function restore() {
+			const poppin = document.querySelector('.pops');
+			const pop_down1 = document.querySelector('.pop_down');
+
+			poppin.style.transform = "scale(0)";
+			pop_down1.style.transform = "scale(0)";
+			location.href = '#main-game';
+			blur.classList.toggle('active');
+		}
+
+		function toggle() {
+			blur.classList.toggle('active');
 		}
 
     </script>
