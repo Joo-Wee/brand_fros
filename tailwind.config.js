@@ -23,7 +23,9 @@ module.exports = {
 
       backgroundImage: {
         'hero-pattern': "url('./media/Landing page.JPG'), linear-gradient(to bottom, rgba(2, 1, 0, 0.8), rgba(5, 3, 0, 0.3))",
-        'games-pattern': "url('./media/OBSKLD0.jpg')"
+        'games-pattern': "url('./media/OBSKLD0.jpg')",
+        'blaq-grad': "linear-gradient(84.32deg, #060400 60.01%, #363636 99.29%)",
+        'button-grad': "linear-gradient(90deg, #FF0404 0%, #FEFCF7 100%)"
       },
 
       keyframes: {
