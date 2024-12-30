@@ -45,52 +45,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(50% 50% at 50% 50%, #FFEAB9 37%, #FEE8B7 55%, #FBDFAE 65%, #F6D1A1 73%, #EEBD8D 80%, #E9AF7F 84%, #A57761 93%, #AD7F64 94%, #C3956B 97%, #E7BA76 99%, #F5C87B 100%);
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 01px #333,
-				1px 0 #555,
-				1px 2px #555,
-				2px 1px #444,
-				2px 3px #444,
-				3px 2px #333,
-				3px 3px #333,
-				0 0 0 15px #F8DC65, 
-				0 0 0 18px #FBE878;
     transition: transform 5s ease-in-out;
   }
-        
-  .container_1 .wheel .number {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background: var(--clr);
-    transform-origin: bottom right;
-    transform: rotate(calc(30deg * var(--i)));
-    clip-path: polygon(0 0, 42% 0, 100% 100%, 0 42%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    cursor: pointer;
-  }
-
-  .container_1 .wheel .number span {
-    position: relative;
-    transform: rotate(50deg);
-    font-size: 1em;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);  
-  }
-  
-  .num_odd {
-	  color: #FDEF9A;
-  }
-  
-  .num_even {
-	  color: #690101;
-  }
-  
   .active {
     filter: blur(20px);
     pointer-events: none;
