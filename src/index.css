@@ -33,20 +33,54 @@
     position: absolute;
     width: 30.35px;
 	height: 26.29px;
-	bottom: 12.9rem;
+	bottom: 11vw;
     left: 11.01px;
     background: linear-gradient(0deg, #FFFB90 35.85%, #FBEA78 77.36%, #F8DC65 107.01%, #E6C758 115.91%, #C5A041 136.66%, #AD8330 154.45%, #9E7226 169.27%, #996C22 181.13%, #9D7126 190.03%, #AA8131 201.89%, #BE9B42 213.75%, #DABE5B 225.61%, #FBE878 240.43%, #FFFFAA 264.15%, #FBE878 281.94%, #A4631B 332.34%);
     clip-path: polygon(50% 100%, 0 0, 100% 0);
   }
 
   .container_1 .wheel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     transition: transform 5s ease-in-out;
   }
+        
+  .container_1 .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(30deg * var(--i)));
+    clip-path: polygon(0 0, 42% 0, 100% 100%, 0 42%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .container_1 .wheel .number span {
+    position: relative;
+    transform: rotate(50deg);
+    font-size: 1em;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);  
+  }
+  
+  #spinner {
+  position: relative;
+  width: 24vw;
+  max-width: 30vw;
+  transform: rotate(-13deg);
+  }
+  
+  .num_odd {
+	  color: #FDEF9A;
+  }
+  
+  .num_even {
+	  color: #690101;
+  }
+  
   .active {
     filter: blur(20px);
     pointer-events: none;

@@ -141,8 +141,9 @@
 								<div class="my-8 ms-[5vw] container_1">
 									<div class="spinBtn">SPIN</div>
 									<div class="wheel">
-										<img id="spinner" class="shake" src="./media/frame-wheel.png" />
+										
 									</div>
+										<img id="spinner" class="shake" src="./media/frame-wheel.png" />
 								</div>
 					
 							</div>
@@ -179,21 +180,22 @@
 		let redPop = document.querySelector('#try-again_pop');
 		var blur = document.getElementById('blur');
 		let value = Math.ceil(Math.random() * 3600);
+		let spinner = document.getElementById('spinner');
 
 		// Define 12 segments with their respective ranges
 		const segments = [
-			{ name: "10 METIS", number: 1, startAngle: 0, endAngle: 30, flagStatus: "positive"},
-			{ name: "GO HOME", number: 2, startAngle: 31, endAngle: 60, flagStatus: "negative"},
-			{ name: "1 METIS", number: 3, startAngle: 61, endAngle: 90, flagStatus: "positive"},
-			{ name: "20K FROSKA", number: 4, startAngle: 91, endAngle: 120, flagStatus: "positive"},
-			{ name: "REKT", number: 5, startAngle: 121, endAngle: 150, flagStatus: "positive"},
-			{ name: "0.5 METIS", number: 6, startAngle: 151, endAngle: 180, flagStatus: "positive"},
-			{ name: "B", number: 7, startAngle: 181, endAngle: 210, flagStatus: "positive"},
-			{ name: "500 KA", number: 8, startAngle: 211, endAngle: 240, flagStatus: "positive"},
-			{ name: "1 FROSKA", number: 9, startAngle: 241, endAngle: 270, flagStatus: "positive"},
-			{ name: "0", number: 10, startAngle: 271, endAngle: 300, flagStatus: "negative"},
-			{ name: "5K FROSKA", number: 11, startAngle: 301, endAngle: 330, flagStatus: "positive"},
-			{ name: "0.002 METIS", number: 12, startAngle: 331, endAngle: 360, flagStatus: "positive"},
+			{ name: "10 METIS", number: 1, startAngle: 0, endAngle: 26.3, flagStatus: "positive" },
+			{ name: "GO HOME", number: 2, startAngle: 26.4, endAngle: 59.8, flagStatus: "negative" },
+			{ name: "1 METIS", number: 3, startAngle: 59.9, endAngle: 86.4, flagStatus: "positive" },
+			{ name: "20K FROSKA", number: 4, startAngle: 86.5, endAngle: 119.5, flagStatus: "positive" },
+			{ name: "REKT", number: 5, startAngle: 119.6, endAngle: 146.3, flagStatus: "positive" },
+			{ name: "0.5 METIS", number: 6, startAngle: 146.3, endAngle: 179.6, flagStatus: "positive" },
+			{ name: "B", number: 7, startAngle: 179.6, endAngle: 206.6, flagStatus: "positive" },
+			{ name: "500 KA", number: 8, startAngle: 206.6, endAngle: 239.7, flagStatus: "positive" },
+			{ name: "1 FROSKA", number: 9, startAngle: 239.8, endAngle: 266.6, flagStatus: "positive" },
+			{ name: "0", number: 10, startAngle: 266.6, endAngle: 300.3, flagStatus: "negative" },
+			{ name: "5K FROSKA", number: 11, startAngle: 300.3, endAngle: 327.1, flagStatus: "positive" },
+			{ name: "0.002 METIS", number: 12, startAngle: 327.1, endAngle: 360, flagStatus: "positive" },
 		];
 
 		if (wheel && spinBtn && resultDisplay) {
@@ -206,6 +208,8 @@
 				// Spin the wheel
 				wheel.style.transition = "transform 3s ease-out";
 				wheel.style.transform = "rotate(" + value + "deg)";
+				spinner.style.transition = "transform 3s ease-out";
+				spinner.style.transform = "rotate(" + value + "deg)";
 				first_res = value%360;
 				console.log(value, first_res);
 
@@ -237,6 +241,8 @@
 					// Reset wheel
 					wheel.style.transition = "none";
 					wheel.style.transform = "rotate(0deg)";
+					spinner.style.transition = "none";
+					spinner.style.transform = "rotate(-13deg)";
 					value = Math.ceil(Math.random() * 3600); // Reset the spin value
 					setTimeout(() => {
 						wheel.style.transition = "transform 6s ease-out";
